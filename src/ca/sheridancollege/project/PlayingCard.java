@@ -10,9 +10,24 @@ package ca.sheridancollege.project;
  * @author Kirandeep Kaur
  */
 
-// Assuming PlayingCard is just an extension of Card for additional functionality
+
+
 public class PlayingCard extends Card {
+
     public PlayingCard(String suit, int value) {
         super(suit, value);
+    }
+
+    public String getSuit() {
+        return suit;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    @Override
+    public String toString() {
+        return suit + " " + value;
     }
 }

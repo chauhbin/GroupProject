@@ -10,25 +10,16 @@ package ca.sheridancollege.project;
  * @author Navdeep Kaur
  * @author Binderpal Singh Chauhan
  */
-public class Card {
-    private String suit; 
-    private int value;   
+
+
+public abstract class Card {
+    protected String suit;
+    protected int value;
 
     public Card(String suit, int value) {
         this.suit = suit;
         this.value = value;
     }
 
-    public String getSuit() {
-        return suit;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    @Override
-    public String toString() {
-        return suit + " " + value; // String representation of the card
-    }
+    public abstract String toString();
 }

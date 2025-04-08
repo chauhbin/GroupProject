@@ -12,29 +12,31 @@ package ca.sheridancollege.project;
  */
 
 
+
+
 import java.util.LinkedList;
 
 public class WarPlayer extends Player {
-    private LinkedList<Card> hand;
+    private LinkedList<PlayingCard> hand;
 
     public WarPlayer(String name) {
         super(name);
         hand = new LinkedList<>();
     }
 
-    public void receiveCard(Card card) {
+    public void receiveCard(PlayingCard card) {
         if (card != null) {
             hand.addLast(card);
         }
     }
 
-    public void receiveCard(Card[] cards) {
-        for (Card card : cards) {
+    public void receiveCard(PlayingCard[] cards) {
+        for (PlayingCard card : cards) {
             receiveCard(card);
         }
     }
 
-    public Card playCard() {
+    public PlayingCard playCard() {
         return hand.isEmpty() ? null : hand.removeFirst();
     }
 
@@ -48,6 +50,6 @@ public class WarPlayer extends Player {
 
     @Override
     public void play() {
-        System.out.println(getPlayerName() + " is playing.");
+        System.out.println(getName() + " is playing.");
     }
 }
