@@ -11,15 +11,28 @@ package ca.sheridancollege.project;
  * @author Kirandeep Kaur
  * @author Jayshree Jayshree 
  */
+
+
+
 public abstract class Player {
-    private String playerName;
+
+    private String name; //the unique name for this player
 
     public Player(String name) {
-        this.playerName = name;
+        this.name = name;
     }
 
     public String getPlayerName() {
-        return playerName;
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // ✅ Added this for compatibility with getName() calls
+    public String getName() {
+        return name;
     }
 
     public abstract void play();
